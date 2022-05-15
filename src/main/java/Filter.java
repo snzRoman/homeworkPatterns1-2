@@ -9,14 +9,14 @@ public class Filter {
         this.treshold = treshold;
     }
 
-    public List<Integer> filterOut(List<Integer> source){
+    public List<Integer> filterOut(List<Integer> source) {
         Logger logger = Logger.getInstance();
         List<Integer> result = new ArrayList<>();
         for (int value : source) {
-            if (value >= treshold){
+            if (value >= treshold) {
                 result.add(value);
                 logger.log("Элемент \"" + value + "\" проходит");
-            }else{
+            } else {
                 logger.log("Элемент \"" + value + "\" не проходит");
             }
         }
